@@ -11,10 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     myAudio.play(); // Reproduce el audio automáticamente
 });
 
-function changeVolume(vol) {
-    var myAudio = document.getElementById("myAudio");
-    myAudio.volume = vol; // Establece el volumen del audio según el valor del control de entrada
-  }
+
 
 // getting bird element properties
 let bird_props = bird.getBoundingClientRect();

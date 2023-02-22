@@ -4,6 +4,13 @@ let img = document.getElementById('bird-1');
 let sound_point = new Audio('sounds effect/point.mp3');
 let sound_die = new Audio('sounds effect/die.mp3');
 
+document.addEventListener("DOMContentLoaded", function() {
+    var myAudio = document.getElementById("myAudio");
+
+    myAudio.volume = 0.5; // Establece el volumen del audio
+    myAudio.play(); // Reproduce el audio automáticamente
+});
+
 // getting bird element properties
 let bird_props = bird.getBoundingClientRect();
 

@@ -1,3 +1,4 @@
+
 let move_speed = 3, grativy = 0.5;
 let bird = document.querySelector('.bird');
 let img = document.getElementById('bird-1');
@@ -7,11 +8,9 @@ let sound_die = new Audio('sounds effect/die.mp3');
 window.addEventListener("load", function() {
     var myAudio = document.getElementById("myAudio");
 
-    myAudio.volume = 0.1; // Establece el volumen del audio
-    myAudio.play(); // Reproduce el audio automáticamente
+    myAudio.volume = 0.1;  
+    myAudio.play();  
 });
-
-
 
 // getting bird element properties
 let bird_props = bird.getBoundingClientRect();
@@ -85,9 +84,6 @@ function play(){
                 img.src = 'images/Bird-2.png';
                 bird_dy = -7.6;
             }
-            if(e.key == 'Enter' && game_state != 'Play'){
-                // Resto del código para iniciar el juego
-            }
         });
 
         document.addEventListener('keyup', (e) => {
@@ -106,22 +102,6 @@ function play(){
         bird.style.top = bird_props.top + bird_dy + 'px';
         bird_props = bird.getBoundingClientRect();
         requestAnimationFrame(apply_gravity);
-
-
-        //tap mobile
-        document.addEventListener('touchstart', (e) => {
-            if(game_state == 'Play'){
-                img.src = 'images/Bird-2.png';
-                bird_dy = -7.6;
-            }
-        });
-
-
-        document.addEventListener('touchstart', () => {
-            if(game_state != 'Play'){
-                // Resto del código para iniciar el juego
-            }
-        });
     }
     requestAnimationFrame(apply_gravity);
 

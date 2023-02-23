@@ -4,7 +4,7 @@ let img = document.getElementById('bird-1');
 let sound_point = new Audio('sounds effect/point.mp3');
 let sound_die = new Audio('sounds effect/die.mp3');
 
-document.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("load", function() {
     var myAudio = document.getElementById("myAudio");
 
     myAudio.volume = 0.1; // Establece el volumen del audio
